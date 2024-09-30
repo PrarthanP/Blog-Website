@@ -12,8 +12,8 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin : ['http://localhost:3000', 'https://blog-website-sage-iota.vercel.app'],
-    methods : ['GET, POST, PUT, DELETE'],
+    origin : '*',
+    methods : '*',
     credentials: true,
 }));
 
