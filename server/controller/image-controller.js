@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'https://blog-website-sage-iota.vercel.app/';
+const url = 'https://blog-website-rb6o.onrender.com/';
 
 
 let gfs, gridfsBucket;
