@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-
+import express from 'express';
+import cors from 'cors';
 //components
 import Connection from './database/db.js';
 import Router from './routes/route.js';
