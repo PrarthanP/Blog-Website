@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Table of Contents
+- [Features](#features)
+- [Tools and Technologies](#tools-and-technologies)
+- [Dependencies](#dependencies)
+- [Dev-dependencies](#dev-dependencies)
+- [Prerequisites](#prerequisites)
+- [Installation and Setup](#installation-and-setup)
+- [Backend API](#backend-api)
+- [Frontend Pages](#frontend-pages)
+- [npm Scripts](#npm-scripts)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+### User-side features
+- Signup
+- Login
+- Logout
+- Add tasks
+- View tasks
+- Update tasks
+- Delete tasks
 
-In the project directory, you can run:
+### Developer-side features
+- Toasts for success and error messages
+- Form validations in frontend and backend
+- Fully Responsive Navbar
+- Token based Authentication
+- Use of 404 page for wrong urls
+- Relevant redirects
+- Global user state using Redux
+- Custom Loaders
+- Use of layout component for pages
+- Use of theme colors
+- No external CSS files needed (made using Tailwind CSS)
+- Usage of Tooltips
+- Dynamic document titles
+- Redirect to previous page after login
+- Use of various React hooks
+- Custom hook also used (useFetch)
+- Routes protection
+- Middleware for verifying the user in backend
+- Use of different HTTP status codes for sending responses
+- Standard pratices followed
 
-### `npm start`
+## Tools and Technologies
+- Javascript
+- Tailwind CSS
+- Node.js
+- Express.js
+- React
+- Redux
+- MongoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies
+Following are the major dependencies of the project:
+- axios
+- react
+- react-dom
+- react-redux
+- react-router-dom
+- react-toastify
+- redux
+- redux-thunk
+- bcrypt
+- cors
+- dotenv
+- express
+- jsonwebtoken
+- mongoose
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Dev-dependencies
+Following are the major dev-dependencies of the project:
+- nodemon
+- concurrently
 
-### `npm test`
+## Prerequisites
+- Node.js must be installed on the system.
+- You should have a MongoDB database.
+- You should have a code editor (preferred: VS Code)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
+1. Install all the dependencies
+   - npm run install-all
+     
+2. Create a file named ".env" inside the backend folder. Add data from .env.example file and substitute your credentials there.
 
-### `npm run build`
+3. Start the application
+   - `npm run dev`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Go to http://localhost:3000 (This URL will be used only when your running your application in local.)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Backend API
+- POST     /api/auth/signup
+- POST     /api/auth/login
+- GET      /api/tasks
+- GET      /api/tasks/:taskId
+- POST     /api/tasks
+- PUT      /api/tasks/:taskId
+- DELETE   /api/tasks/:taskId
+- GET      /api/profile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend Pages
+- /                 Home Screen (Public home page for guests and private dashboard (tasks) for logged-in users)
+- /signup           Signup page
+- /login            Login page
+- /tasks/add        Add new task
+- /tasks/:taskId    Edit a task
 
-### `npm run eject`
+## npm Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `npm run dev`: Starts both the client and server in development mode.
+- `npm run server`: Starts the server using nodemon for auto-reloading.
+- `npm run client`: Starts the React client application.
+- `npm run build`: Creates a production build of the React application.
+- `npm run install-all`: Installs dependencies for both client and server.
+- `npm run heroku-postbuild`: Builds the client for production deployment on Heroku.
+- `npm start`: Starts the server in production mode.
+- `npm test`: Runs tests for the client application.
+- `npm run eject`: Ejects the create-react-app configuration (use with caution).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To use these scripts:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Navigate to the root directory of your project in the terminal.
+2. Run any script using `npm run <script-name>`. For example: `npm run dev`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: Make sure you have all the necessary dependencies installed before running these scripts.
